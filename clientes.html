@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <meta charset="utf-8" />
+        <title>Gerencimento de Estadias - Clientes</title>
+        <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+        <link rel="stylesheet" type="text/css" href="css/tabela.css">
+        <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="banner">                
+                <img src="imagens/banner06.jpg" alt="banner06"/>
+            </div>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="imagens/logo.jpg" alt="Logo Dino Consultoria" />
+                    <h1>Gestão de Estadias</h1>
+                    <p>Dino Consultoria</p>
+                </a>                
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="painel.html">Quadro de Apartamentos</a></li>
+                <li><a href="hospedagem.html">Hospedar</a></li>                
+            </ul>
+        </nav>
+        <div id="body">
+            <div id="content">
+                <a href=""><img src="imagens/user_add.gif" alt="Novo Cadastro de Cliente"/> Novo Cadastro</a>                
+                <hr />
+                <div>
+                    <form name="cadastroclientes" method="post" action="">
+                        <h1>Cadastro de Cliente</h1>
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <label for="nome">
+                            Nome:
+                            <span>Digite o nome do cliente</span>                    
+                            </label>
+                            <input type="text" name="nome" size="50" value="" />
+                            <label for="rg">
+                                RG:
+                                <span>Ex: 12.345.678-90</span>                    
+                            </label>
+                            <input type="text" name="rg" size="15" value="" />
+
+                            <label for="cpf">
+                                CPF:
+                                <span>Ex: 123.456.789-01</span>                    
+                            </label>
+                            <input type="text" name="cpf" size="15" value="" />
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Contato</legend>
+                            <label for="mail">
+                                E-mail:
+                                <span>Ex: email@dominio.com</span>                    
+                            </label>
+                            <input type="mail" name="mail" size="50" value="" />
+                            <label for="fone">
+                                Telfone:
+                                <span>Ex: (13) 7890-5361</span>                    
+                            </label>
+                            <input type="tel" name="fone" value="" size="15"/>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            <label for="logradouro">
+                                Endereço:
+                                <span>Ex: Av. Que sobe e desce, 007</span>                    
+                            </label>
+                            <input type="text" name="endereco" size="40" value="" />
+                            <label for="cidade">
+                                Cidade:                                
+                            </label>
+                            <input type="text" name="cidade" value="" size="15"/>
+                            <label for="estado">
+                                Estado:                                
+                            </label>
+                            <select name="estado">
+                                <option value="">Selecione o estado</option>
+                            </select>
+                        </fieldset>
+                        <br style="clear:both"/>
+                        <button type="submit">Cadastrar</button>
+                        <button type="reset">Cancelar</button>
+                    </form>
+                    <br style="clear:both"/>
+                </div>
+                <hr />
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ultima Hospedagem</th>
+                        <th>Tem Reserva?</th>
+                        <th colspan="2">Opções</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Marcus Vinicius Alfieri Bispo da Costa</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                </table>
+            </div>            
+        </div>
+        <footer>
+            <p>Gerenciamento de Estadias. Dino Consultoria 2012</p>
+        </footer>
+    </body>
+</html>
