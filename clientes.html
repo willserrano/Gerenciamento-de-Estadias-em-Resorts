@@ -8,10 +8,11 @@
         <link rel="stylesheet" type="text/css" href="css/form.css">
         <link rel="stylesheet" type="text/css" href="css/tabela.css">
         <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+        <script type="text/javascript" src="js/funcoes.js"></script>
     </head>
     <body>
         <header>
-            <div id="banner">                
+            <div id="banner">
                 <img src="imagens/banner06.jpg" alt="banner06"/>
             </div>
             <div id="logo">
@@ -19,7 +20,7 @@
                     <img src="imagens/logo.jpg" alt="Logo Dino Consultoria" />
                     <h1>Gestão de Estadias</h1>
                     <p>Dino Consultoria</p>
-                </a>                
+                </a>
             </div>
         </header>
         <nav>
@@ -27,66 +28,96 @@
                 <li><a href="clientes.html">Clientes</a></li>
                 <li><a href="reservas.html">Reservas</a></li>
                 <li><a href="painel.html">Quadro de Apartamentos</a></li>
-                <li><a href="hospedagem.html">Hospedar</a></li>                
+                <li><a href="hospedagem.html">Hospedar</a></li>
             </ul>
         </nav>
         <div id="body">
             <div id="content">
-                <a href=""><img src="imagens/user_add.gif" alt="Novo Cadastro de Cliente"/> Novo Cadastro</a>                
-                <hr />
-                <div>
+                <a id="button">
+                    <img src="imagens/user_add.gif" alt="Novo Cadastro de Cliente"/>
+                    Novo Cadastro
+                </a>
+                <div id="form-cad-cliente">
+                    <hr />
+                    <h2>Cadastro de Cliente</h2>
                     <form name="cadastroclientes" method="post" action="">
-                        <h1>Cadastro de Cliente</h1>
                         <fieldset>
                             <legend>Dados Pessoais</legend>
-                            <label for="nome">
-                            Nome:
-                            <span>Digite o nome do cliente</span>                    
+                            <label>
+                                Nome:
+                                <span>Digite o nome do cliente</span>
                             </label>
                             <input type="text" name="nome" size="50" value="" />
-                            <label for="rg">
+                            <label>
                                 RG:
-                                <span>Ex: 12.345.678-90</span>                    
+                                <span>Ex: 12.345.678-90</span>
                             </label>
                             <input type="text" name="rg" size="15" value="" />
 
-                            <label for="cpf">
+                            <label>
                                 CPF:
-                                <span>Ex: 123.456.789-01</span>                    
+                                <span>Ex: 123.456.789-01</span>
                             </label>
                             <input type="text" name="cpf" size="15" value="" />
                         </fieldset>
 
                         <fieldset>
                             <legend>Contato</legend>
-                            <label for="mail">
+                            <label>
                                 E-mail:
-                                <span>Ex: email@dominio.com</span>                    
+                                <span>Ex: email@dominio.com</span>
                             </label>
-                            <input type="mail" name="mail" size="50" value="" />
-                            <label for="fone">
+                            <input type="email" name="mail" size="50" value="" />
+                            <label>
                                 Telfone:
-                                <span>Ex: (13) 7890-5361</span>                    
+                                <span>Ex: (13) 7890-5361</span>
                             </label>
                             <input type="tel" name="fone" value="" size="15"/>
                         </fieldset>
 
                         <fieldset>
                             <legend>Endereço</legend>
-                            <label for="logradouro">
+                            <label>
                                 Endereço:
-                                <span>Ex: Av. Que sobe e desce, 007</span>                    
+                                <span>Ex: Av. Que sobe e desce, 007</span>
                             </label>
-                            <input type="text" name="endereco" size="40" value="" />
-                            <label for="cidade">
-                                Cidade:                                
+                            <input type="text" name="endereco" size="50" value="" />
+                            <label>
+                                Cidade:
                             </label>
                             <input type="text" name="cidade" value="" size="15"/>
-                            <label for="estado">
-                                Estado:                                
+                            <label>
+                                Estado:
                             </label>
                             <select name="estado">
                                 <option value="">Selecione o estado</option>
+                                <option value="ac">Acre</option>
+                                <option value="al">Alagoas</option>
+                                <option value="am">Amazonas</option>
+                                <option value="ap">Amapá</option>
+                                <option value="ba">Bahia</option>
+                                <option value="ce">Ceará</option>
+                                <option value="df">Distrito Federal</option>
+                                <option value="es">Espírito Santo</option>
+                                <option value="go">Goiás</option>
+                                <option value="ma">Maranhão</option>
+                                <option value="mt">Mato Grosso</option>
+                                <option value="ms">Mato Grosso do Sul</option>
+                                <option value="mg">Minas Gerais</option>
+                                <option value="pa">Pará</option>
+                                <option value="pb">Paraíba</option>
+                                <option value="pr">Paraná</option>
+                                <option value="pe">Pernambuco</option>
+                                <option value="pi">Piauí</option>
+                                <option value="rj">Rio de Janeiro</option>
+                                <option value="rn">Rio Grande do Norte</option>
+                                <option value="ro">Rondônia</option>
+                                <option value="rs">Rio Grande do Sul</option>
+                                <option value="rr">Roraima</option>
+                                <option value="sc">Santa Catarina</option>
+                                <option value="se">Sergipe</option>
+                                <option value="sp">São Paulo</option>
+                                <option value="to">Tocantins</option>
                             </select>
                         </fieldset>
                         <br style="clear:both"/>
@@ -94,8 +125,9 @@
                         <button type="reset">Cancelar</button>
                     </form>
                     <br style="clear:both"/>
+                    <hr />
                 </div>
-                <hr />
+                <br style="clear:both"/>
                 <table>
                     <tr>
                         <th>Nome</th>
@@ -117,8 +149,65 @@
                         <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
                         <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
                     </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Zé das Couves</a></td>
+                        <td>30/05/2012</td>
+                        <td>Sim</td>
+                        <td><a href=""><img src="imagens/edit.jpg" alt="Alteração de Cadastro de Cliente"/> Alterar</a></td>
+                        <td><a href=""><img src="imagens/delete.png" alt="Apagar de Cadastro de Cliente"/> Excluir</a></td>
+                    </tr>
                 </table>
-            </div>            
+
+            </div>
         </div>
         <footer>
             <p>Gerenciamento de Estadias. Dino Consultoria 2012</p>

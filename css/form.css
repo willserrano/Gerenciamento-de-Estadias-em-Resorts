@@ -1,8 +1,27 @@
 @charset "utf-8";
 
+#button{
+    display: block;
+    margin: 10px;
+}
+
 form{
-    margin: 15px;
-    padding: 10px;
+    margin: 15px 5px;
+}
+
+fieldset{
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border-color: #CAE8EA;
+    margin: 10px auto;
+    width: 85%;
+}
+
+fieldset legend{
+    margin-left: 20px;
+    padding: 0 5px;
+    color: #7AE0EA;
+    font-weight: bold;
 }
 
 form h1 {
@@ -22,7 +41,7 @@ form p{
 form label{
     clear: both;
     display:block;
-    font-size: 16px;
+    font-size: 14px;
     font-weight:bold;
     text-align:right;
     width:140px;
@@ -44,7 +63,7 @@ form input, form select, form textarea{
     margin: 0 0 15px 10px;
     padding:4px 0 4px 5px;
     border-radius: 8px;
-    font-size:22px;
+    font-size:16px;
 }
 
 form button{
