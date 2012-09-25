@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    $("div#form-cad-cliente").hide();
+    $("div#oculto").hide();
 
     $("a#button").toggle(function(){
-        $("div#form-cad-cliente").fadeIn(); // ou slideDown()
+        $("div#oculto").fadeIn(); // ou slideDown()
     },
     function(){
-        $("div#form-cad-cliente").fadeOut(); // ou slideUp()
+        $("div#oculto").fadeOut(); // ou slideUp()
     })
 });
